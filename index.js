@@ -7,7 +7,10 @@ function map(array, fnc) {
   return rt
 }
 
-function reduce(array, fnc, start = 0) {
+function reduce(array, fnc, start) {
+  if(!start) {
+    start = array
+  }
   for(let ele of array) {
     start = fnc(ele, start)
   }
