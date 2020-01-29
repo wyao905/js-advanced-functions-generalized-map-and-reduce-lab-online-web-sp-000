@@ -9,7 +9,7 @@ function map(array, fnc) {
 
 function reduce(array, fnc, start) {
   if(!start) {
-    start = array
+    start = array[0]
   }
   for(let ele of array) {
     start = fnc(ele, start)
