@@ -8,11 +8,12 @@ function map(array, fnc) {
 }
 
 function reduce(array, fnc, start) {
+  let i = 0
   if(!start) {
     start = array[0]
-    let i = 1
+    i = 1
   }
-  for(let i = 0; i < array.length; i++) {
+  for(; i < array.length; i++) {
     start = fnc(array[i], start)
   }
   return start
